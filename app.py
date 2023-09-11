@@ -3,7 +3,7 @@ from flask import request
 import pandas as pd
 import  numpy as np
 import pickle
-import os
+
 
 
 popular_40 = pd.read_csv('zomato_40.csv')
@@ -81,11 +81,11 @@ def recommend_food():
                            food=list(top_15['food'].values),
                            price=list(top_15['avg_price_for_two'].values))
 
-port = int(os.environ.get("PORT", 5000))
-
-if __name__ == '__main__':
-    app.run(host='0.0.0.0', port=port)
+# port = int(os.environ.get("PORT", 5000))
+#
 # if __name__ == '__main__':
-#     app.run(debug=True)
+#     app.run(host='0.0.0.0', port=port)
+if __name__ == '__main__':
+    app.run(debug=True)
 
 
