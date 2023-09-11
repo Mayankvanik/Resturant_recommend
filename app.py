@@ -81,7 +81,7 @@ def recommend_food():
                            price=list(top_15['avg_price_for_two'].values))
 
 
-if __name__ == '__main__':
-    app.run(debug=True)
+# if __name__ == '__main__':
+#     app.run(debug=True)
 
 
