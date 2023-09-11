@@ -12,11 +12,7 @@ cosine = pickle.load(open('similarity.pkl','rb'))
 
 app =  Flask(__name__)
 
-
-
 @app.route('/')
-# def index():
-#     return render_template('index.html')
 def index():
     return render_template('index.html',
                            restaurant_detail_url=list(popular_40['site_url'].values),
